@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "5"
+# ///
 # DBTITLE 1,Import transform function
 try:
     from unified_transform_logic.gold import transform
@@ -37,3 +41,6 @@ except KeyError:
     target_catalog = "dev"
 
 final_result_df.write.saveAsTable(f"{target_catalog}.gold.transform_sales_transaction", mode="overwrite", mergeSchema=True)
+
+# COMMAND ----------
+
