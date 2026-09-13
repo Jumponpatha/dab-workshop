@@ -28,9 +28,9 @@ class TestTierDiscount(unittest.TestCase):
         except:
             cls.spark = spark
 
-    @classmethod
-    def tearDownClass(cls):
-        cls.spark.stop()
+    # @classmethod
+    # def tearDownClass(cls):
+    #     cls.spark.stop()
 
     def test_apply_function(self):
         fact_sales_schema = StructType([
@@ -83,5 +83,3 @@ class TestTierDiscount(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-
